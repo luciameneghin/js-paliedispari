@@ -14,34 +14,20 @@
 
 const addWord = prompt('Scrivi una parola');
 console.log(addWord)
+
 const arrayAddWord = addWord.split('').reverse().join('');
 console.log(arrayAddWord);
-let message;
 
-palindrome(addWord, arrayAddWord)
+let isPalindrome = palindrome(addWord, arrayAddWord)
 
 function palindrome(writeWord, reversedWord) {
-  let palindromeWord = false;
   if (reversedWord === writeWord) {
-    palindromeWord = true;
-    message = 'la parola è palindroma'
+    return `la parola è palindroma`;
   } else {
-    message = 'la parola NON è palindroma'
+    return `la parola NON è palindroma`;
   }
-  console.log(message);
-  return palindrome
 }
-
-
-
-// let palindromeWord = false;
-// if (arrayAddWord === addWord) {
-//   palindromeWord = true;
-//   message = 'la parola è palindroma'
-// } else {
-//   message = 'la parola NON è palindroma'
-// }
-// console.log(message)
+console.log(isPalindrome);
 
 
 

@@ -22,29 +22,26 @@ const pcNumber = Math.ceil(Math.random() * 5);
 console.log('il numero del pc=', pcNumber);
 
 
-oddEven(playerNumber, pcNumber)
+let oddEvenResault = false;
+let message = 'hai perso';
 
 function oddEven(playerGame, pcGame) {
-  let message;
+  let isOddOrEven;
   const oddEvenValue = parseInt(playerGame) + parseInt(pcGame);
-  message = `la somma è= ${parseInt(oddEvenValue)}`;
-  console.log(message);
+  isOddOrEven = `la somma è= ${parseInt(oddEvenValue)}`;
+  console.log(isOddOrEven);
 
   if (!(oddEvenValue % 2)) {
-    message = 'pari'
+    isOddOrEven = 'pari'
   } else {
-    message = 'dispari'
+    isOddOrEven = 'dispari'
   }
-  console.log(message)
-
-  return oddEvenValue
+  return isOddOrEven
 }
-console.log(oddEvenValue);
 
-if (oddEvenValue = playerOddEven) {
+if (oddEven(playerNumber, pcNumber) === playerOddEven) {
+  oddEvenResault = true;
   message = 'hai vinto';
-} else {
-  message = 'hai perso'
 }
 console.log(message)
 
