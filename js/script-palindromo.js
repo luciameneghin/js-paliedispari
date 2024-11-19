@@ -16,17 +16,32 @@ const addWord = prompt('Scrivi una parola');
 console.log(addWord)
 const arrayAddWord = addWord.split('').reverse().join('');
 console.log(arrayAddWord);
-
-let palindromeWord = false;
 let message;
 
-if (arrayAddWord === addWord) {
-  palindromeWord = true;
-  message = 'la parola è palindroma'
-} else {
-  message = 'la parola NON è palindroma'
+palindrome(addWord, arrayAddWord)
+
+function palindrome(writeWord, reversedWord) {
+  let palindromeWord = false;
+  if (reversedWord === writeWord) {
+    palindromeWord = true;
+    message = 'la parola è palindroma'
+  } else {
+    message = 'la parola NON è palindroma'
+  }
+  console.log(message);
+  return palindrome
 }
-console.log(message)
+
+
+
+// let palindromeWord = false;
+// if (arrayAddWord === addWord) {
+//   palindromeWord = true;
+//   message = 'la parola è palindroma'
+// } else {
+//   message = 'la parola NON è palindroma'
+// }
+// console.log(message)
 
 
 
